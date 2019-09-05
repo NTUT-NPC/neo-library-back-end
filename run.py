@@ -106,22 +106,24 @@ def get_video_info(student_id):
         return {'completed': True}
 
 
-@app.route('/api/game/<ladder>/<student_id>', methods=['POST'])
+@app.route('/api/game/<ladder>/<student_id>', methods=['POST', 'GET'])
 def check_info(ladder, student_id):
     # Check whether the inputs of user is correct or not
-
+    print("123", sys.stdout)
+    print(ladder, sys.stdout)
+    print(student_id, sys.stdout)
     # Simplify variable
-    check_student_id = ladder_counter_student_id['store_student_id']
+    student_ids = ladder_counter_student_id['student_id']
 
     # Check whether the student ID is correct or not
     if(check_student_id(student_id) == False):
         return abort(404)
 
     # Check Whether the student ID is duplicated or not
-    if(student_id in check_student_id):
+    if(student_id in student_ids):
         return abort(403)
     else:
-        check_student_id.append(student_id)
+        student_ids.append(student_id)
 
     # Check whether the ladder is correct or not
     if(ladder not in ladder_counter_student_id):
