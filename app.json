@@ -1,0 +1,9 @@
+{
+    "name": "Flask sample on Heroku",
+    "description": "An example of deploying Flask web app to Heroku.",
+    "image": "heroku/python",
+    "keywords": [
+        "python",
+        "flask"
+    ]
+}
