@@ -164,15 +164,15 @@ def auth():
     # return jwt
     # else return 401
 
-    user_info = {
-        student_id: {
-            "lottery": None,
-            "character_index": 0,
-            "game_data": {
-                "current_chapter_index": 0,
-                "current_stage_index": 0,
-                "inventory": []
-            }
+    user_info = {}
+
+    user_info[student_id] = {
+        "lottery": None,
+        "character_index": 0,
+        "game_data": {
+            "current_chapter_index": 0,
+            "current_stage_index": 0,
+            "inventory": []
         }
     }
 
@@ -183,7 +183,7 @@ def auth():
         ladders_info[ladder].update(user_info)
 
     ladders_info[ladder][student_id]["character_index"] = (
-        len(ladders_info[ladder])-1) % 3
+        len(ladders_info[ladder])-1) % 2
 
     token_info = {
         "ladder": ladder,
@@ -294,7 +294,7 @@ def set_ladder_status():
             ladders_info[ladder]["is_open"] = {
                 "0": False,
                 "1": False,
-                "2": False
+                # "2": False
             }
 
         ladders_info[ladder]["is_open"][character_index] = bool(is_open)
