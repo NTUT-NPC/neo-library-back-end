@@ -1,0 +1,28 @@
+{
+    "1":{
+        "106300138":{
+            "character_index":0,
+            "lottery":0
+        },
+        "106300139":{
+            "character_index":0,
+            "lottery":0
+        }
+    },
+    "c4ca4238a0b923820dcc509a6f75849b":{
+        "106300124":{
+            "character_index":null,
+            "lottery":1
+        },
+        "106300125":{
+            "character_index":null,
+            "lottery":1
+        }
+    },
+    "c81e728d9d4c2f636f067f89cc14862c":{
+        "106300126":{
+            "character_index":null,
+            "lottery":1
+        }
+    }
+}
