@@ -164,15 +164,15 @@ def auth():
     # return jwt
     # else return 401
 
-    user_info = {
-        student_id: {
-            "lottery": None,
-            "character_index": 0,
-            "game_data": {
-                "current_chapter_index": 0,
-                "current_stage_index": 0,
-                "inventory": []
-            }
+    user_info = {}
+
+    user_info[student_id] = {
+        "lottery": None,
+        "character_index": 0,
+        "game_data": {
+            "current_chapter_index": 0,
+            "current_stage_index": 0,
+            "inventory": []
         }
     }
 
